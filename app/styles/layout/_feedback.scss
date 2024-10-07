@@ -96,37 +96,15 @@
     z-index: 2;
   }
   .slick-prev {
-    left: 45%;
+    right: calc(50% + 14px);
   }
   .slick-next {
-    right: 45%;
-  }
-  @include maxWidth(1024px) {
-    .slick-prev {
-      left: 43%;
-    }
-    .slick-next {
-      right: 43%;
-    }
+    left: calc(50% + 14px);
   }
   @include maxWidth(820px) {
     &-list {
       display: block;
       margin-top: 20px;
-    }
-    .slick-prev {
-      left: 40%;
-    }
-    .slick-next {
-      right: 40%;
-    }
-  }
-  @include maxWidth(431px) {
-    .slick-prev {
-      left: 35%;
-    }
-    .slick-next {
-      right: 35%;
     }
   }
 }

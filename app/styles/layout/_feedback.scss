@@ -101,6 +101,14 @@
   .slick-next {
     right: 45%;
   }
+  @include maxWidth(1024px) {
+    .slick-prev {
+      left: 43%;
+    }
+    .slick-next {
+      right: 43%;
+    }
+  }
   @include maxWidth(820px) {
     &-list {
       display: block;

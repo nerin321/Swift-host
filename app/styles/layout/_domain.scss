@@ -33,7 +33,7 @@
     border: none;
     border-radius: 10px;
   }
-  @include maxWidth(431px) {
+  @include maxWidth(768px) {
     &-btn {
       font-size: 20px;
       padding: 0 30px;

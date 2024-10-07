@@ -26,3 +26,26 @@ window.addEventListener("click", function (e) {
     menuAuth.classList.remove(isLogin);
   }
 });
+
+// slider
+$(document).ready(function () {
+  $(".feedback-list").slick({
+    infinite: true,
+    slidesToShow: 2,
+    slidesToScroll: 2,
+    prevArrow:
+      "<button type='button' class='slick-prev pull-left slick-arrow'><i class='fa fa-chevron-left' aria-hidden='true'></i></button>",
+    nextArrow:
+      "<button type='button' class='slick-next pull-right slick-arrow'><i class='fa fa-chevron-right' aria-hidden='true'></i></button>",
+    responsive: [
+      {
+        breakpoint: 767,
+        settings: {
+          arrows: true,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  });
+});

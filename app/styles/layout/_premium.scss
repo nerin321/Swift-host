@@ -61,7 +61,6 @@
       display: block;
       margin-top: 72px;
       &-img {
-        height: 701px;
         margin: 0 auto 20px;
       }
     }
@@ -71,6 +70,13 @@
       }
       &-content{
         font-size: 12px;
+      }
+    }
+  }
+  @include maxWidth(431px){
+    &-container{
+      &-img{
+        height: 300px;
       }
     }
   }

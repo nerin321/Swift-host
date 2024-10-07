@@ -4,16 +4,19 @@
     margin-top: 59px;
   }
   &-list {
+    margin-top: 59px;
+    margin-bottom: 250px;
     @include flexBox();
-    gap: 14px;
   }
   &-item {
     background-color: white;
     color: $text-color;
     border: 1px solid black;
     border-radius: 9px;
+    margin-left: 14px;
   }
   &-box {
+    @include flexBox(stretch, space-between, column);
     padding: 6px 20px 0;
     position: relative;
     margin: 20px 0;
@@ -61,7 +64,22 @@
     @include flexBox(center, center);
     gap: 30px;
   }
-  &-btn {
+  // &-btn {
+  //   font-size: 30px;
+  //   color: $primary-color;
+  //   text-align: center;
+  //   border: none;
+  //   @include size(50px);
+  //   border-radius: 9999px;
+  //   background-color: white;
+  //   &:hover {
+  //     @include linearColor;
+  //   }
+  // }
+  .slick-initialized .slick-slide {
+    display: flex;
+  }
+  .slick-arrow {
     font-size: 30px;
     color: $primary-color;
     text-align: center;
@@ -72,16 +90,35 @@
     &:hover {
       @include linearColor;
     }
+    position: absolute;
+    bottom: -120px;
+    // transform: translateY(-50%);
+    z-index: 2;
+  }
+  .slick-prev {
+    left: 45%;
+  }
+  .slick-next {
+    right: 45%;
   }
   @include maxWidth(820px) {
     &-list {
       display: block;
+      margin-top: 20px;
     }
-    &-item:not(:last-child) {
-      margin-bottom: 25px;
+    .slick-prev {
+      left: 40%;
     }
-    &-slider {
-      margin-top: 30px;
+    .slick-next {
+      right: 40%;
+    }
+  }
+  @include maxWidth(431px) {
+    .slick-prev {
+      left: 35%;
+    }
+    .slick-next {
+      right: 35%;
     }
   }
 }

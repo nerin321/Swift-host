@@ -1,0 +1,35 @@
+.domain{
+    background-color: #D9D5D5 ;
+    color: $text-color !important;
+    padding: 60px 0;
+    &-form{
+        margin: 70px auto;
+        height: 78px;
+        padding: 8px;
+        max-width: 800px;
+        border: 2px solid #0072EC;
+        background-color: white;
+        border-radius: 10px;
+        @include flexBox();
+    }
+    &-input{
+        @include size(100%);
+        outline: none;
+        border: none;
+        padding-left: 40px;
+        font-size: 24px;
+        &::placeholder {
+          color: #180D5C;
+          font-size: 24px;
+        }
+    }
+    &-btn{
+        font-size: 34px;
+        font-weight: 600;
+        color: white;
+        padding: 0 65px;
+        text-align: center;
+        border: none;
+        border-radius: 10px;
+    }
+}

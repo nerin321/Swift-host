@@ -1,0 +1,51 @@
+mixin blockTop(title, desc)
+    .block-top 
+        h3.block-top-title= title 
+        p.block-top-desc= desc  
+
+mixin premiumItem(src= "../images/img-lightning-icon.png", title= "Lightning-Fast Load Times", content= "")
+    .premium-container-item
+        .premium-container-item-top 
+            .premium-container-item-box 
+                img(src= src alt="").premium-container-item-box-img
+            span.premium-container-item-top-title= title
+        p.premium-container-item-content= content
+
+mixin planContentItem(text= "10 GB SSD Storage")
+    li.plan-content-item 
+        img(src="../images/img-check.png" alt="")
+        p.plan-content-text= text 
+
+mixin planItem(title="Starter Plan", img= "../images/img-plan-start.png", text="Starting At :", number= 4.99)
+    .plan-item 
+        h1.plan-title= title
+        .plan-content
+            img.plan-content-img(src=img alt="")
+            ul.plan-content-list 
+                if block 
+                    block 
+            .plan-price 
+                p.plan-price-text= text
+                if text == "Starting At :"
+                    p.plan-price-number <sup>$</sup><span>#{number}</span>/month
+                else   
+                    p.plan-price-number  <span>For a quote</span>
+                button.plan-btn Get Started
+
+mixin feedbackStart()
+    img.feedback-item-bottom-start(src="../images/img-feedback-start.png", alt="")
+
+mixin feedbackItem(src, name= "No name", position= "None", text= " None")
+    .feedback-item
+        .feedback-box 
+            .feedback-top
+                img.feedback-top-img(src=src , alt="")
+                .feedback-top-info 
+                    h2.feedback-top-name= name 
+                    span.feedback-top-position= position 
+            .feedback-content
+                img.feedback-content-icon(src="../images/img-feedback-icon.png", alt="")
+                p.feedback-content-text= text 
+            .feedback-bottom 
+                if block 
+                    block 

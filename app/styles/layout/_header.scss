@@ -1,0 +1,136 @@
+.header {
+  padding: 74px 0;
+  &-top {
+    @include flexBox(center, space-between);
+    margin-bottom: 75px;
+    &-toggle {
+      display: none;
+    }
+    &-user {
+      display: none;
+    }
+    &-nav {
+      @include flexBox();
+      gap: 33px;
+      font-size: 16px;
+      font-weight: 500;
+    }
+    &-item a {
+      color: white;
+    }
+    &-auth-login {
+      padding: 5px 20px;
+      border-radius: 999999px;
+      font-weight: 600;
+      color: white;
+      &:hover {
+        color: $primary-color;
+        background: linear-gradient(
+          to right,
+          rgba(#78ffd6, 0.8),
+          rgba(#24a4ff, 0.8)
+        );
+      }
+    }
+  }
+  &-container {
+    &-max {
+      @include flexBox(end);
+    }
+    &-mobile {
+      display: none;
+    }
+    &-title {
+      width: 95%;
+      font-weight: bold;
+      font-size: 56px;
+      margin-bottom: 29px;
+    }
+    &-desc {
+      font-size: 24px;
+      margin-bottom: 88px;
+    }
+    &-search {
+      width: 70%;
+      border: 2px solid white;
+      border-radius: 99999px;
+      @include flexBox();
+      padding: 5px;
+      &-input {
+        outline: none;
+        border: none;
+        border-radius: 99999px;
+        width: 100%;
+        background-color: $primary-color;
+        color: white;
+        padding-left: 15px;
+        &::placeholder {
+          color: white;
+        }
+      }
+      &-btn {
+        padding: 8px 30px;
+        border: none;
+        border-radius: 99999px;
+        font-weight: bold;
+        color: white;
+      }
+    }
+  }
+  @include maxWidth(1025px) {
+    &-container{
+        &-title{
+            font-size: 50px;
+        }
+        &-desc{
+            font-size: 20px;
+            margin-bottom: 50px;
+        }
+    }
+  }
+  @include maxWidth(768px) {
+    &-top {
+      margin-bottom: 60px;
+      &-nav {
+        display: none;
+      }
+      &-auth {
+        display: none;
+      }
+      &-toggle {
+        display: block;
+      }
+      &-user {
+        display: block;
+      }
+      &-logo img {
+        width: 72px;
+        object-fit: cover;
+        
+      }
+    }
+    &-container {
+      &-max {
+        display: none;
+      }
+      &-mobile {
+        display: block;
+      }
+      &-title {
+        font-size: 24px;
+        text-align: center;
+      }
+      &-img {
+        margin: 50px auto 60px;
+      }
+      &-desc {
+        font-size: 14px;
+        text-align: center;
+        margin-bottom: 60px;
+      }
+      &-search {
+        width: 100%;
+      }
+    }
+  }
+}

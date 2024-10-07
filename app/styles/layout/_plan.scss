@@ -1,0 +1,111 @@
+.plan {
+  padding: 74px 0;
+  &-container {
+    @include flexBox();
+    gap: 22px;
+    color: #3a3939;
+    margin-top: 180px;
+  }
+  &-item {
+    width: 100%;
+    background-color: white;
+    border-top-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    &:hover {
+      transform: scale(1.2);
+      max-width: 300px;
+      margin: 0 30px;
+      transition: all 0.25s;
+    }
+  }
+  &-title {
+    @include linearColor();
+    text-align: center;
+    color: #180d5c;
+    font-weight: bold;
+    font-size: 28px;
+    padding: 23px 0;
+    border-top-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+  }
+  &-content {
+    height: calc(100% - 74px);
+    padding: 30px 25px;
+    @include flexBox(center, space-between, column);
+    &-img {
+      margin-bottom: 19px;
+    }
+    &-list {
+      margin-bottom: 20px;
+    }
+    &-item {
+      @include flexBox(center);
+      gap: 10px;
+      margin-bottom: 10px;
+      font-weight: 600;
+      & img {
+        @include size(21px);
+      }
+    }
+  }
+  &-price {
+    text-align: center;
+    
+    &-text {
+      font-weight: 600;
+    }
+    &-number {
+      font-weight: 600;
+      position: relative;
+      margin-top: 10px;
+      & span {
+        font-size: 34px;
+      }
+      & sup {
+        position: absolute;
+        left: 0;
+      }
+    }
+  }
+  &-btn {
+    margin-top: 17px;
+    padding: 16px 32px;
+    border: none;
+    border-top-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    font-size: 18px;
+    font-weight: bold;
+    @include linearColor("dark blue");
+    color: white;
+    font-family: $primary-font;
+  }
+
+  @include maxWidth(769px) {
+    &-container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      margin-top: 70px;
+    }
+    &-item {
+      height: fit-content;
+      &:hover {
+        margin-bottom: 60px;
+      }
+    }
+  }
+
+  @include maxWidth(431px) {
+    &-container {
+      display: block;
+      margin-top: 57px;
+    }
+    &-item {
+      width: 80%;
+      margin: 52px auto;
+      &:hover {
+        // transform: scale(1.2);
+        margin: 104px auto;
+      }
+    }
+  }
+}

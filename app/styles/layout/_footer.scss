@@ -38,7 +38,7 @@
     font-weight: 600;
     font-size: 24px;
   }
-  @include maxWidth(768px){
+  @include maxWidth(820px){
     &-top{
       display: block;
       &-left{

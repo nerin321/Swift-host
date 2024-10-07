@@ -73,7 +73,7 @@
       @include linearColor;
     }
   }
-  @include maxWidth(768px) {
+  @include maxWidth(820px) {
     &-list {
       display: block;
     }

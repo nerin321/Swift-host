@@ -146,7 +146,7 @@ html {
     .header-container-desc {
       font-size: 20px;
       margin-bottom: 50px; } }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 820px) {
     .header-top {
       margin-bottom: 60px; }
       .header-top-nav {
@@ -353,7 +353,7 @@ html {
     .plan-item:hover {
       -webkit-transform: scale(1.2);
       transform: scale(1.2);
-      max-width: 300px;
+      max-width: 350px;
       margin: 0 30px;
       -webkit-transition: all 0.25s;
       transition: all 0.25s; }
@@ -436,7 +436,7 @@ html {
     background: linear-gradient(90deg, #00b3ff 0%, #2490f6 18%, #5163ea 44%, #7242e2 68%, #862edd 87%, #8d27db 100%);
     color: white;
     font-family: "Montserrat", sans-serif; }
-  @media screen and (max-width: 769px) {
+  @media screen and (max-width: 912px) {
     .plan-container {
       display: -ms-grid;
       display: grid;
@@ -444,11 +444,11 @@ html {
       grid-template-columns: repeat(2, 1fr);
       margin-top: 70px; }
     .plan-item {
-      height: -webkit-fit-content;
-      height: -moz-fit-content;
-      height: fit-content; }
+      height: 605px; }
       .plan-item:hover {
-        margin-bottom: 60px; } }
+        width: 100%;
+        margin-bottom: 60px;
+        margin-top: 60px; } }
   @media screen and (max-width: 431px) {
     .plan-container {
       display: block;
@@ -595,7 +595,7 @@ html {
     .feedback-btn:hover {
       background: -webkit-gradient(linear, left top, right top, from(#78ffd6), color-stop(18%, #72f9d9), color-stop(43%, #61e6e1), color-stop(71%, #46c9ee), to(#24a4ff));
       background: linear-gradient(90deg, #78ffd6 0%, #72f9d9 18%, #61e6e1 43%, #46c9ee 71%, #24a4ff 100%); }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 820px) {
     .feedback-list {
       display: block; }
     .feedback-item:not(:last-child) {
@@ -730,7 +730,7 @@ html {
     text-align: center;
     font-weight: 600;
     font-size: 24px; }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 820px) {
     .footer-top {
       display: block; }
       .footer-top-left {

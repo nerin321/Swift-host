@@ -136,6 +136,7 @@ html {
     .header-container-search-btn {
       padding: 8px 30px;
       border: none;
+      cursor: pointer;
       border-radius: 99999px;
       font-weight: bold;
       color: white; }
@@ -652,6 +653,7 @@ html {
     font-size: 34px;
     font-weight: 600;
     color: white;
+    cursor: pointer;
     padding: 0 65px;
     text-align: center;
     border: none;

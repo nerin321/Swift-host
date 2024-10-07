@@ -149,13 +149,61 @@ html {
     .header-top {
       margin-bottom: 60px; }
       .header-top-nav {
-        display: none; }
+        position: fixed;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        background-color: white;
+        width: 18rem;
+        display: block;
+        padding: 74px 25px;
+        z-index: 10;
+        -webkit-transform: translateX(-100%);
+        transform: translateX(-100%);
+        -webkit-transition: -webkit-transform 0.5s ease-in-out;
+        transition: -webkit-transform 0.5s ease-in-out;
+        transition: transform 0.5s ease-in-out;
+        transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out; }
+        .header-top-nav.is-expand {
+          -webkit-transform: translateX(0%);
+          transform: translateX(0%); }
+      .header-top-item {
+        margin-bottom: 20px; }
+        .header-top-item a {
+          color: #3A3939;
+          font-size: 24px;
+          font-weight: 700; }
       .header-top-auth {
-        display: none; }
+        position: fixed;
+        right: 0;
+        top: 100px;
+        bottom: 0;
+        background-color: white;
+        width: 18rem;
+        height: -webkit-fit-content;
+        height: -moz-fit-content;
+        height: fit-content;
+        display: block;
+        padding: 20px 25px;
+        z-index: 10;
+        -webkit-transform: translateX(100%);
+        transform: translateX(100%);
+        -webkit-transition: -webkit-transform 0.5s ease-in-out;
+        transition: -webkit-transform 0.5s ease-in-out;
+        transition: transform 0.5s ease-in-out;
+        transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
+        border-radius: 9999px; }
+        .header-top-auth.is-login {
+          -webkit-transform: translateX(0%);
+          transform: translateX(0%); }
+        .header-top-auth a {
+          color: #3A3939; }
       .header-top-toggle {
-        display: block; }
+        display: block;
+        cursor: pointer; }
       .header-top-user {
-        display: block; }
+        display: block;
+        cursor: pointer; }
       .header-top-logo img {
         width: 72px;
         -o-object-fit: cover;
